@@ -1,2 +1,2 @@
 # bhaskara
-Site para calcular a formula de Bhaskara
+Site para calcular a fórmula de Bhaskara
