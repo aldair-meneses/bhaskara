@@ -1,49 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;   
+
 }
+
 
 #form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0.3em;
+    padding: 0.3em;    
 }
     
 body {
     font-family: "Asap", sans-serif;
     font-size: 20px;
-    color: #065099ce;
-    background-color: #dfdbe5;
-}
-
-@media (min-width: 500px) {
-    #title {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      max-width: auto;
-      width: 100%;
-      padding: 1em;
-    }
+    color: #fff9f9;
+    background-color: #1b6bd48a;
 }
 
 #title { 
     text-align: center;
-    font-size: 2em;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    font-size: 2em;   
 }
 
 #form input {
-  font-size: inherit;
-  font-family: inherit;
-  width: 100%;
-  padding: 0.5em;
+    font-size: inherit;
+    font-family: inherit;
+    width: 100%;
+    padding: 0.5em;
 }
 
 
@@ -57,20 +45,45 @@ h3 {
     display: block;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 #sec {
     padding: 0.5em;
-    box-shadow: 6px 6px 20px gray, -6px -6px 20px white;
-    background-color: #dfdbe5;
-    font-size: 25px;
-  }
-button {
+    box-shadow:1px 1px 1px 1px rgba(47, 146, 212, 0.432), -3px -3px 5px rgba(10, 10, 10, 0.651);
+    background-color: #5da9e7;
+    font-size: 15px;
     margin-top: 1em;
+    border-radius: 10px 10px 10px 10px;
+    height: 510px;
+    width: 350px;    
+  }
+
+#x1, #x2 {
+    display: block;
+    text-align: center;    
+}
+
+button {
     font-family: "Asap", sans-serif;
     font-size: inherit;
     font-family: inherit;
     width: 100%;
+    padding: 8px;
+    border-radius: 8px 8px 8px 8px;
+    border-color: #5da9e7;
+    margin-top: 35px;    
+}
+
+@media only screen and (max-width: 620px) {
+    /* mobile */
+    #form, #sec, button, #title, h3 {
+        width: 100%;
+    }
+}
+
+#xnr {
+    text-align: center;
+    justify-content: center;
     padding: 0.5em;
 }

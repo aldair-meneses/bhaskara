@@ -16,6 +16,11 @@ function bhaskara() {
     const X2 = (-b - Math.sqrt(delta)) / (2 * a);   
     $X1.value = X1
     $X2.value = X2
+    // não possui resultados reais 
+    if (delta < 0){
+        document.getElementById("xnr").innerHTML = "Não possui raizes reais"
+    }
+
     
 }
 calc.addEventListener('click', function () {
