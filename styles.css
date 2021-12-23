@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.3em;
+}
+    
+body {
+    font-family: "Asap", sans-serif;
+    font-size: 20px;
+    color: #065099ce;
+    background-color: #dfdbe5;
+}
+
+@media (min-width: 500px) {
+    #title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: auto;
+      width: 100%;
+      padding: 1em;
+    }
+}
+
+#title { 
+    text-align: center;
+    font-size: 2em;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+#form input {
+  font-size: inherit;
+  font-family: inherit;
+  width: 100%;
+  padding: 0.5em;
+}
+
+
+
+h3 {
+    text-align: center;  
+    margin-top: 15px; 
+}
+
+#a, #b, #c {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+#sec {
+    padding: 0.5em;
+    box-shadow: 6px 6px 20px gray, -6px -6px 20px white;
+    background-color: #dfdbe5;
+    font-size: 25px;
+  }
+button {
+    margin-top: 1em;
+    font-family: "Asap", sans-serif;
+    font-size: inherit;
+    font-family: inherit;
+    width: 100%;
+    padding: 0.5em;
+}
