@@ -10,20 +10,21 @@
 <body>  
 <main id="main">
     
-    <form id="form">
+<div id="form">
 <section id="sec">
     <h1 id="title">Fórmula do 2° Grau</h1>
     <label for="1stl">   
     <h3>Digite o valor de A</h3>  
-    <input type="number" name="a" id="a" placeholder="a">
+    <input type="text" name="a" id="a" placeholder="a" onkeypress="return isNumber(event);" >
     </label>
     <label for="2stl">      
     <h3>Digite o valor de B</h3>
-    <input type="number" name="b" id="b" placeholder="b">
+    <input type="text" name="b" id="b" placeholder="b"/ onkeypress="return isNumber(event);" >
+    <!-- <input type="text" name="b" pattern="[0-9]" id="b" placeholder="b"> -->
     </label>
     <label for="3stl">
     <h3>Digite o valor de C</h3>
-    <input type="number" name="c" id="c" placeholder="c"> 
+    <input type="text" name="c" id="c" placeholder="c" onkeypress="return isNumber(event);" > 
     </label>
     <div id="result">
         <label id="x1">
@@ -35,8 +36,8 @@
             <input disabled="disabled" id="X2">
         </label>
     </div>
-    <button type="button">Calcular</button>
-    </form>
+    <button>Calcular</button>
+</div>
     <script src="app.js"></script>
 </section>
 </main>   

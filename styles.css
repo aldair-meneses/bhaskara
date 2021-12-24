@@ -1,17 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,700&display=swap');
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;   
 
 }
-
 
 #form {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     padding: 0.3em;    
 }
     
@@ -32,9 +29,8 @@ body {
     font-family: inherit;
     width: 100%;
     padding: 0.5em;
+    text-align: center;
 }
-
-
 
 h3 {
     text-align: center;  
@@ -52,16 +48,18 @@ h3 {
     padding: 0.5em;
     box-shadow:1px 1px 1px 1px rgba(47, 146, 212, 0.432), -3px -3px 5px rgba(10, 10, 10, 0.651);
     background-color: #5da9e7;
-    font-size: 15px;
-    margin-top: 1em;
+    font-size: 14px;
+    margin-top: 4em;
     border-radius: 10px 10px 10px 10px;
     height: 510px;
     width: 350px;    
+    justify-content: center;
+    align-items: center;
   }
 
 #x1, #x2 {
-    display: block;
-    text-align: center;    
+    display: block;  
+    text-align: center;
 }
 
 button {
@@ -87,3 +85,4 @@ button {
     justify-content: center;
     padding: 0.5em;
 }
+

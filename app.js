@@ -17,12 +17,15 @@ function bhaskara() {
     $X1.value = X1
     $X2.value = X2
     // não possui resultados reais 
-    if (delta < 0){
-        document.getElementById("xnr").innerHTML = "Não possui raizes reais"
-    }
+};
 
-    
+function isNumber(e){
+    e = e || window.event;
+    var charCode = e.which ? e.which : e.keyCode;
+    return /\d/.test(String.fromCharCode(charCode));
 }
+
 calc.addEventListener('click', function () {
-    bhaskara();  
+    bhaskara();
 }); 
+
