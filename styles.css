@@ -30,6 +30,16 @@ body {
     width: 100%;
     padding: 0.5em;
     text-align: center;
+    margin: 0;   
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
 }
 
 h3 {
@@ -48,10 +58,10 @@ h3 {
     padding: 0.5em;
     box-shadow:1px 1px 1px 1px rgba(47, 146, 212, 0.432), -3px -3px 5px rgba(10, 10, 10, 0.651);
     background-color: #5da9e7;
-    font-size: 14px;
-    margin-top: 4em;
+    font-size: 16px;
+    margin-top: 3em;
     border-radius: 10px 10px 10px 10px;
-    height: 510px;
+    height: 500px;
     width: 350px;    
     justify-content: center;
     align-items: center;
