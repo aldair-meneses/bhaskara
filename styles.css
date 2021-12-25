@@ -24,14 +24,23 @@ body {
     font-size: 2em;   
 }
 
-#form input {
+#form input{
     font-size: inherit;
     font-family: inherit;
     width: 100%;
     padding: 0.5em;
     text-align: center;
     margin: 0;   
+    border-radius:10px;
+    border: none;
+    border: solid 1px #ccc;
+    outline:none;
+    
+    
 }
+
+
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
@@ -41,6 +50,15 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
+
+/* input:focus, input.form-control:focus {
+
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+} */
 
 h3 {
     text-align: center;  
@@ -58,41 +76,42 @@ h3 {
     padding: 0.5em;
     box-shadow:1px 1px 1px 1px rgba(47, 146, 212, 0.432), -3px -3px 5px rgba(10, 10, 10, 0.651);
     background-color: #5da9e7;
-    font-size: 16px;
+    font-size: 15px;
     margin-top: 3em;
     border-radius: 10px 10px 10px 10px;
     height: 500px;
     width: 350px;    
     justify-content: center;
     align-items: center;
-  }
-
-#x1, #x2 {
-    display: block;  
-    text-align: center;
 }
+
+#result {
+    justify-content: space-between;
+    text-align: center;
+    margin: 2em;
+    margin-top: 20px;
+}
+
 
 button {
     font-family: "Asap", sans-serif;
     font-size: inherit;
     font-family: inherit;
-    width: 100%;
+    width: 50%;
     padding: 8px;
     border-radius: 8px 8px 8px 8px;
     border-color: #5da9e7;
-    margin-top: 35px;    
+    text-align: center;
+    margin: auto;
+    display: flex;
+    display: grid;
 }
 
 @media only screen and (max-width: 620px) {
     /* mobile */
-    #form, #sec, button, #title, h3 {
+    #form, #sec, #title, h3 {
         width: 100%;
     }
 }
 
-#xnr {
-    text-align: center;
-    justify-content: center;
-    padding: 0.5em;
-}
 
