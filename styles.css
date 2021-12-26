@@ -107,6 +107,13 @@ button {
     display: grid;
 }
 
+#xnr {
+    text-align: center;
+    margin: 0;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
 @media only screen and (max-width: 620px) {
     /* mobile */
     #form, #sec, #title, h3 {
