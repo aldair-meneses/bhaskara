@@ -25,25 +25,29 @@ body {
 }
 
 #form input{
+    display: block;
     font-size: inherit;
     font-family: inherit;
-    width: 100%;
+    width: 90%;
     padding: 0.5em;
     text-align: center;
-    margin: 0;   
+    margin: auto;   
     border-radius:10px;
     border: none;
     border: solid 1px #ccc;
-    outline:none;
-    
-    
+    outline:none;    
+}
+
+#result {
+    text-align: center;
+    margin: 4em;
+    margin-top: 5px;
 }
 
 
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0;
 }
@@ -51,18 +55,18 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
-/* input:focus, input.form-control:focus {
-
+input:focus, input.form-control:focus { 
     outline:none !important;
     outline-width: 0 !important;
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
-} */
+} 
 
 h3 {
     text-align: center;  
-    margin-top: 15px; 
+    margin: 5px; 
+    margin-top: 12px;
 }
 
 #a, #b, #c {
@@ -85,14 +89,6 @@ h3 {
     align-items: center;
 }
 
-#result {
-    justify-content: space-between;
-    text-align: center;
-    margin: 2em;
-    margin-top: 20px;
-}
-
-
 button {
     font-family: "Asap", sans-serif;
     font-size: inherit;
@@ -105,17 +101,18 @@ button {
     margin: auto;
     display: flex;
     display: grid;
+    margin-top: -40px;
 }
 
 #xnr {
     text-align: center;
     margin: 0;
-    font-size: 16px;
-    margin-top: 10px;
+    font-size: 18px;
+    margin-top: 25px;
 }
 
 @media only screen and (max-width: 620px) {
-    /* mobile */
+        /* mobile */
     #form, #sec, #title, h3 {
         width: 100%;
     }
