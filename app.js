@@ -37,6 +37,10 @@ function removeMsg() {
     const text = document.getElementById("temp")
     text.remove();
 }
+function isNumberKey(evt){
+    var charCode = (evt.which) ? evt.which : evt.keyCode
+    return !(charCode > 31 && (charCode < 48 || charCode > 57));
+}
 
 
 calc.addEventListener('click', function() {
