@@ -102,6 +102,7 @@ button {
     display: flex;
     display: grid;
     margin-top: -40px;
+    cursor: pointer;
 }
 
 #temp {
