@@ -10,8 +10,6 @@ function bhaskara() {
     const b = B.value;
     const c = C.value;
 
-
-
     const delta = b ** 2 - 4 * a * c;
     
     if (a == '' || b == '' || c == '') {
@@ -27,13 +25,11 @@ function bhaskara() {
         x2.value = X2;
     }
 
-    if (x1.value == 'NaN'){
+    if (x1.value == 'NaN' || x2.value == 'NaN'){
         createMsg("\nCaracter inválido.\n")
     }
     
 }
-
-
 
 function createMsg(txt) {
     document.getElementById('warnings').innerHTML = (`<h1 id="temp">${txt}</h1>`);
