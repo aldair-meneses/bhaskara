@@ -2,7 +2,6 @@
 * {
     margin: 0;
     box-sizing: border-box;   
-
 }
 
 #form {
@@ -83,12 +82,13 @@ h3 {
 
 button {
     font-family: "Asap", sans-serif;
+    font-size: inherit;
     width: 50%;
     padding: 9px;
     border-radius: 7px;
     border-color: #5da9e7;
     margin: auto;
-    /* display: flex; */
+    display: flex;
     display: grid;
     margin-top: -40px;
     cursor: pointer;
