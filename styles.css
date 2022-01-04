@@ -69,13 +69,6 @@ h3 {
     margin-top: 12px;
 }
 
-#a, #b, #c {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 10px;
-}
-
 #sec {
     padding: 0.5em;
     box-shadow:1px 1px 1px 1px rgba(47, 146, 212, 0.432), -3px -3px 5px rgba(10, 10, 10, 0.651);
