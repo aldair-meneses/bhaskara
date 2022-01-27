@@ -3,12 +3,12 @@ const B = document.getElementById('b');
 const C = document.getElementById('c');
 const x1 = document.getElementById('X1');
 const x2 = document.getElementById('X2');
-const calc = document.querySelector('button')
+const calc = document.querySelector('button');
 
 function bhaskara() {
-    const a = parseInt(A.value);
-    const b = parseInt(B.value);
-    const c = parseInt(C.value);
+    const a = A.value;
+    const b = B.value;
+    const c = C.value;
 
     const delta = b ** 2 - 4 * a * c;
     
@@ -22,30 +22,31 @@ function bhaskara() {
         const X1 = (-b + Math.sqrt(delta)) / (2 * a);
         const X2 = (-b - Math.sqrt(delta)) / (2 * a);
         x1.value = X1;
-        x2.value = X2;   
+        x2.value = X2;  
+        validate_number();
     }
-    
-    const letras = /[a-zA-Z]/g;
-    if (letras.test(a) == true){
+
+}   
+function validate_number(){
+    const letras = /[a-zA-Z]/;
+    if (letras.test(a.value + b.value + c.value) == true){
+        x1.value = '';
+        x2.value = '';
+    }
+    if (letras.test(a.value) == true){
         createMsg("\nO Caractere digitado para A é inválido");
-    } 
-    else if (letras.test(b) == true){
-        createMsg("\nO Caractere digitado para B é inválido");
+    }else if(letras.test(b.value) == true){
+        createMsg("\nO Caractere digitado para B é inválido")
+    }else if(letras.test(c.value) == true){
+        createMsg("\nO Caractere digitado para C é inválido")
     }
-    else if (letras.test(c) == true){
-        createMsg("\nO Caractere digitado para C é inválido");
-    }
-    x1.value = '';
-    x2.value = '';
-}
-
-
+}   
 function createMsg(txt) {
     document.getElementById('warnings').innerHTML = (`<h1 id="temp">${txt}</h1>`);
     setTimeout ( function () {
         removeMsg();
     }, 3000);
-   };
+};
 
 
 
@@ -54,7 +55,7 @@ function removeMsg() {
     text.remove();
 };
 
-calc.addEventListener('click', function(event) {
-    event.preventDefault(),bhaskara();
+calc.addEventListener('click', function() {
+    bhaskara();
 }); 
 
