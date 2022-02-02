@@ -3,7 +3,18 @@ const B = document.getElementById('b');
 const C = document.getElementById('c');
 const x1 = document.getElementById('X1');
 const x2 = document.getElementById('X2');
-const calc = document.querySelector('button');
+const calc = document.querySelector('#form-b');
+const btn_help = document.querySelector('#btn_help')
+
+// function modal_help() {
+//     document.innerHTML = document.querySelector('#help.button')
+// }
+
+
+btn_help.addEventListener('click', function() {
+    modal_help();
+})
+
 
 function bhaskara() {
     const a = A.value;
@@ -16,6 +27,8 @@ function bhaskara() {
         createMsg("Digite os valores de A, B e C.");
     }else if (delta < 0) {
         createMsg("Não possui raízes reais.");
+        x1.value = '';
+        x2.value = '';
     }else if(a == 0) {
         createMsg("O valor de A não pode ser 0.");
     }else {  
@@ -28,16 +41,16 @@ function bhaskara() {
 
 }   
 function validate_number(){
-    const letras = /[a-zA-Z]/;
-    if (letras.test(a.value + b.value + c.value) == true){
+    const numbers = /^[-0-9]+$/;
+    if (numbers.test(a.value + b.value + c.value) == false){
         x1.value = '';
         x2.value = '';
     }
-    if (letras.test(a.value) == true){
+    if (numbers.test(a.value) == false){
         createMsg("\nO Caractere digitado para A é inválido");
-    }else if(letras.test(b.value) == true){
+    }else if(numbers.test(b.value) == false){
         createMsg("\nO Caractere digitado para B é inválido")
-    }else if(letras.test(c.value) == true){
+    }else if(numbers.test(c.value) == false){
         createMsg("\nO Caractere digitado para C é inválido")
     }
 }   

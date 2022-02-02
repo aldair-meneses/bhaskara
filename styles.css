@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,700&display=swap');
+
 * {
     margin: 0;
     box-sizing: border-box;   
@@ -67,6 +68,22 @@ h3 {
     margin-top: 12px;
 }
 
+
+.help-button{
+    display: none;
+}
+
+.btn_help{
+    background: none;
+    border: none;
+}
+
+.head_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #sec {
     padding: 0.5em;
     box-shadow:1px 1px 1px 1px rgba(47, 146, 212, 0.432), -3px -3px 5px rgba(10, 10, 10, 0.651);
@@ -80,7 +97,7 @@ h3 {
     align-items: center;
 }
 
-button {
+.btn {
     font-family: "Asap", sans-serif;
     font-size: inherit;
     width: 50%;
@@ -95,6 +112,13 @@ button {
     background-color: #fff9f9;
 }
 
+img{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background: none;
+}
+
 #temp {
     text-align: center;
     margin: 0;
@@ -102,9 +126,14 @@ button {
     margin-top: 25px;
 }
 
+
+
 @media only screen and (max-width: 620px) {
         /* mobile */
     #form, #sec, #title, h3 {
         width: 100%;
+    }
+    #Help {
+        max-width: 300px;
     }
 }
