@@ -71,9 +71,9 @@ h3 {
 
 
 .sec{
-    -webkit-transition: 0.7s;
-    -moz-transition: 0.7s;
-    transition: 0.7s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
     position: relative;
     padding: 0.5em;
     box-shadow:1px 1px 1px 1px rgba(47, 146, 212, 0.432), -3px -3px 5px rgba(10, 10, 10, 0.651);
@@ -169,10 +169,7 @@ img{
 
 
 
-.guide-title{
-    text-align: center;
-    margin-top: 1em;
-}
+
 
 .help-page  {
     opacity: 1;
@@ -184,10 +181,10 @@ img{
     justify-content: center;
     align-items: center;
     top: 0;
-    margin-left: 15px;
+    margin-left: 1px;
     margin-top: 10px;
     height: 430px;
-    width: 320px;
+    width: 330px;
     border: solid 2px;
     background: #5da9e7;
     border: none;
@@ -199,4 +196,18 @@ img{
     position: absolute; 
     top: -9999px; 
     left: -9999px;
+}
+
+.help-page p{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 1em;
+
+}
+
+.help-page h1{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 2em;
+
 }
