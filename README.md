@@ -3,7 +3,7 @@ Com o site https://bhaskaraform.vercel.app é possível calcular equações de s
 A ferramenta vai fornecer se a equação possui raízes e caso possua, o formulário de bhaskara vai apresentar as raizes da equação.  
 
 
-![Demonstração](/images/home.png)
+![Demonstração]<div style="text-align:center"><img src="..." />(/images/home.png)</div>
 
 
 
