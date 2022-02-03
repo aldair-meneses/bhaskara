@@ -5,11 +5,12 @@
     box-sizing: border-box;   
 }
 
-#form {
+.form {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0.3em;    
+    transition: opacity 0.5s ease-in;
 }
     
 body {
@@ -69,22 +70,11 @@ h3 {
 }
 
 
-.help-button{
-    display: none;
-}
-
-.btn_help{
-    background: none;
-    border: none;
-}
-
-.head_container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#sec {
+.sec{
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    transition: 0.7s;
+    position: relative;
     padding: 0.5em;
     box-shadow:1px 1px 1px 1px rgba(47, 146, 212, 0.432), -3px -3px 5px rgba(10, 10, 10, 0.651);
     background-color: #5da9e7;
@@ -130,10 +120,83 @@ img{
 
 @media only screen and (max-width: 620px) {
         /* mobile */
-    #form, #sec, #title, h3 {
+    .form, .sec, .sec-help, #title, h3 {
         width: 100%;
     }
-    #Help {
-        max-width: 300px;
+    .help-page {
+        max-width: 320px;
     }
+}
+
+/* Guide Area */
+
+.sec-help {
+    opacity: 1.5;
+    background: #4593d3;
+    margin: auto;
+    position: relative;
+    padding: 0.5em;
+    box-shadow: 1px 1px 1px 1px rgba(57, 57, 58, 0.658), -3px -3px 5px rgba(10, 10, 10, 0.651);
+    font-size: 15px;
+    margin-top: 3em;
+    border-radius: 10px 10px 10px 10px;
+    height: 500px;
+    width: 350px;    
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn_help{
+    background: none;
+    border: none;
+}
+
+.head_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close_btn{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 18px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+
+
+.guide-title{
+    text-align: center;
+    margin-top: 1em;
+}
+
+.help-page  {
+    opacity: 1;
+    -webkit-transition: opacity 0.4s ease-in;
+    -moz-transition: opacity 0.4s ease-in;
+    transition: opacity 0.4s ease-in;
+    border-radius: 10px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    margin-left: 15px;
+    margin-top: 10px;
+    height: 430px;
+    width: 320px;
+    border: solid 2px;
+    background: #5da9e7;
+    border: none;
+    box-shadow:1px 1px 1px 1px rgba(47, 146, 212, 0.432), -3px -3px 5px rgba(10, 10, 10, 0.651);
+}
+
+.help-off{
+    opacity: 0;
+    position: absolute; 
+    top: -9999px; 
+    left: -9999px;
 }

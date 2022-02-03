@@ -5,28 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formula do 2° Grau</title>
-    <link href="styles.css" rel="stylesheet" >
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body id="body">  
-<main id="main">    
-<div id="form">
-    <section id="sec">
+<main id="main">
+<div id="form" class="form">
+    <section id="sec" class="sec">
     <div class="head_container">
-        <h1 id="title">Fórmula de Bhaskara</h1>
-    <div class="Help_container">
-        <button class="btn_help"><img src="images/help-icon.svg"></button>
-    </div>
-    <div id="div-help" class="help-modal">
-        <div class="w3-modal-content">
-          <div class="help-container">
-            <span class="help-button" id="help-button">&times;</span>
-            <p>Some text. Some text. Some text.</p>
-            <p>Some text. Some text. Some text.</p>
-          </div>
+            <h1 id="title">Fórmula de Bhaskara</h1>
+        <div class="Help_container">
+            <button id="btn_help" class="btn_help"><img src="images/help-icon.svg"></button>
         </div>
-      </div>
+             <!--Area de regras...-->
+        <div id="help_page" class="help-off">
+            <span id="close_btn" class="close_btn">&times</span>
+            <h1 class="guide-title">Calcular Discriminante</h1>
+            <p></p> 
+        </div>
     </div> 
-        <!--valores da equação-->
+    <!--valores da equação-->
     <label for="1stl">   
     <h3>Digite o valor de A</h3>  
     <input type="texto" name="a" id="a" placeholder="a" />
@@ -39,7 +36,7 @@
     <h3>Digite o valor de C</h3>
     <input type='texto' name="c" id="c" placeholder="c" /> 
     </label>
-    <!--Resultado da equação e avisos-->
+    <!--Resultado da equação-->
     <div id="result">
         <label id="x1">
             X1
@@ -51,11 +48,12 @@
         </label>
     </div>
     <button id="form-btn" class="btn">Calcular</button>
-    <script src="app.js"></script>
+    <!--Área de Avisos-->
     <div id="warnings"><br></div>     
-</div>
-    
+</div>      
 </section>
+   
+    <script src="app.js"></script>
 </main>   
 
 </body>

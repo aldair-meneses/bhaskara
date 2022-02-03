@@ -1,20 +1,30 @@
+const btn_help = document.querySelector('#btn_help');
+const help = document.getElementById('help_page');
+const sec = document.getElementById('sec');
+
+function close_btn(){
+    help.className = 'help-off';
+    sec.className = 'sec';
+
+}
+
+function modal_help() {   
+    sec.className = 'sec-help'  
+    help.className = 'help-page';
+    close_help = document.getElementById('close_btn');
+    close_help.addEventListener('click', close_btn); 
+    
+}   
+
+
+btn_help.addEventListener('click', modal_help)
+
 const A = document.getElementById('a');
 const B = document.getElementById('b');
 const C = document.getElementById('c');
 const x1 = document.getElementById('X1');
 const x2 = document.getElementById('X2');
-const calc = document.querySelector('#form-b');
-const btn_help = document.querySelector('#btn_help')
-
-// function modal_help() {
-//     document.innerHTML = document.querySelector('#help.button')
-// }
-
-
-btn_help.addEventListener('click', function() {
-    modal_help();
-})
-
+const calc = document.querySelector('#form-btn');
 
 function bhaskara() {
     const a = A.value;
