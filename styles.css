@@ -148,9 +148,15 @@ img{
 }
 
 .btn_help{
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition: 0.3s ease-in;
+    opacity: 0.55;
     background: none;
     border: none;
 }
+
+.btn_help:hover {opacity: 1;}
 
 .head_container{
     display: flex;
