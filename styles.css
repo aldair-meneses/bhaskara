@@ -5,215 +5,53 @@
     box-sizing: border-box;   
 }
 
-.form {
+.guide {
+    padding: 1.5em;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 0.3em;    
-    transition: opacity 0.5s ease-in;
-}
-    
-body {
     font-family: "Asap", sans-serif;
-    font-size: 20px;
-    color: #fff9f9;
-    background-color: #1b6bd48a;
+    font-size: 36px;
+    gap: 10px;
 }
 
-#title { 
-    text-align: center;
-    font-size: 2em;   
+.guide img{
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
 }
 
-#form input{
-    display: block;
-    font-size: inherit;
-    font-family: inherit;
-    width: 90%;
-    padding: 0.5em;
-    text-align: center;
-    margin: auto;   
-    border-radius:10px;
-    border: none;
-    border: solid 1px #ccc;
-    outline:none;    
-}
-
-#result {
-    text-align: center;
-    margin: 4em;
-    margin-top: 5px;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-input[type=number] {
-    -moz-appearance: textfield;
-}
-
-input:focus, input.form-control:focus { 
-    outline:none !important;
-    outline-width: 0 !important;
-    box-shadow: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-} 
-
-h3 {
-    text-align: center;  
-    margin: 5px; 
-    margin-top: 12px;
-}
-
-
-.sec{
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    transition: 1s;
-    position: relative;
-    padding: 0.5em;
-    box-shadow:1px 1px 1px 1px rgba(47, 146, 212, 0.432), -3px -3px 5px rgba(10, 10, 10, 0.651);
-    background-color: #5da9e7;
-    font-size: 15px;
-    margin-top: 3em;
-    border-radius: 10px 10px 10px 10px;
-    height: 500px;
-    width: 350px;    
-    justify-content: center;
-    align-items: center;
-}
-
-.btn {
+.guide-values {
     font-family: "Asap", sans-serif;
-    font-size: inherit;
-    width: 50%;
-    padding: 9px;
-    border-radius: 7px;
-    border-color: #5da9e7;
-    margin: auto;
     display: flex;
-    display: grid;
-    margin-top: -40px;
-    cursor: pointer;
-    background-color: #fff9f9;
+    flex-direction: row;
+    justify-content: center;
+    gap: 9em;
+    margin: 12px;
 }
 
-img{
-    cursor: pointer;
-    width: 40px;
+.place-values {
+    display: flex;
+    justify-content: center;  
+ 
+}
+
+.place-values input{
+    border: 2px solid black;
+    text-align: center;
+    font-family: "Asap", sans-serif;
+    height: 3em;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.button button {
+    width: 200px;
     height: 40px;
-    background: none;
-}
-
-#temp {
-    text-align: center;
-    margin: 0;
-    font-size: 18px;
-    margin-top: 25px;
-}
-
-
-
-@media only screen and (max-width: 620px) {
-        /* mobile */
-    .form, .sec, .sec-help, #title, h3 {
-        width: 100%;
-    }
-    .help-page {
-        max-width: 320px;
-    }
-}
-
-/* Guide Area */
-
-.sec-help {
-    opacity: 1.5;
-    background: #4593d3;
-    margin: auto;
-    position: relative;
-    padding: 0.5em;
-    box-shadow: 1px 1px 1px 1px rgba(57, 57, 58, 0.658), -3px -3px 5px rgba(10, 10, 10, 0.651);
-    font-size: 15px;
-    margin-top: 3em;
-    border-radius: 10px 10px 10px 10px;
-    height: 500px;
-    width: 350px;    
-    justify-content: center;
-    align-items: center;
-
-}
-
-.btn_help{
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    transition: 0.3s ease-in;
-    opacity: 0.55;
-    background: none;
     border: none;
-}
-
-.btn_help:hover {opacity: 1;}
-
-.head_container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.close_btn{
-    display: flex;
-    position: absolute;
-    top: 0;
-    right: 18px;
-    font-size: 40px;
+    border-radius: 4px;
     cursor: pointer;
-}
-
-
-
-
-
-.help-page  {
-    opacity: 1;
-    -webkit-transition: opacity 0.4s ease-in;
-    -moz-transition: opacity 0.4s ease-in;
-    transition: opacity 0.4s ease-in;
-    border-radius: 10px;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    margin-left: 1px;
-    margin-top: 10px;
-    height: 430px;
-    width: 330px;
-    border: solid 2px;
-    background: #5da9e7;
-    border: none;
-    box-shadow:1px 1px 1px 1px rgba(47, 146, 212, 0.432), -3px -3px 5px rgba(10, 10, 10, 0.651);
-}
-
-.help-off{
-    opacity: 0;
-    position: absolute; 
-    top: -9999px; 
-    left: -9999px;
-}
-
-.help-page p{
-    font-size: 20px;
-    text-align: center;
-    margin-top: 1em;
-
-}
-
-.help-page h1{
-    font-size: 20px;
-    text-align: center;
-    margin-top: 2em;
-
 }
