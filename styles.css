@@ -6,18 +6,39 @@
 }
 
 
+
+.guide-content {
+    text-align: center;
+}
+
+
 .modal {
-    display: none; 
+    display: block;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
     position: fixed;
-    z-index: 1; 
     padding-top: 100px;
     left: 0;
     top: 0;
     width: 100%; 
     height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);   
+    transition: opacity 0.3s ease;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+}
+
+.close-btn {
+    display: flex;
+    justify-content: right;
+    font-size: 40px;
+   
+}
+
+.modal.show {
+    pointer-events: auto;
+    opacity: 1;
 }
 
 .guide-content {

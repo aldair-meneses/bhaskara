@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math-ways</title>
     <link href="styles.css" rel="stylesheet"> 
+    <script>
+    MathJax = {
+        loader: {load: ['input/asciimath', 'output/chtml']}
+    }
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+     id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
 </head>
 <body>
     <div class="head-container">    
@@ -16,8 +26,14 @@
     <div class="modal" id="modal_content">
         <div id="guide_page" class="guide-content">
             <span id="close_btn" class="close-btn">&times</span>
-            <h1>Equação reduzida do segundo grau</h1>
-            <p>conteúdos do mathxJs</p>
+            <h3>Equação reduzida do segundo grau</h3>
+            <p>`ax^2 + bx + c = 0`</p>
+            <h3>Formula de Bhaskara</h3>
+            <p>`x =( -b \ pm sqrt(b²-4*a*c))/(2*a)`</p>
+            <h3>Começa por encontrar a discriminante (Delta)</h3>
+            <p>`Delta =( -b pm sqrt(Delta))/(2*a)`</p>
+            <h3>após encontrar a discriminante, substitua os valores na fórmula</h3>
+            <p>`x =(-bpmsqrtDelta)/(2*a) `</p>
         </div>
     </div>
     </div>    
