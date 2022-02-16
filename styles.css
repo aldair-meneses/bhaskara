@@ -33,6 +33,7 @@
     color: #aaaaaa;
     font-size: 30px;
     float: right;
+    margin-right: 10px;
     font-weight: bold;
 }
 
@@ -48,20 +49,20 @@
 }
 
 .guide-content {
-    display: flex;
-    flex-direction: column;
     text-align: center;
     margin: auto;
     background-color: #fefefe;
     border: 1px solid #888;
-    width: 800px;
-    height: 440px;
+    width: 700px;
+    height: 450px;
   }
 
 .guide-content h3{
-    gap: 2px;
+    display: flex;
+    justify-content: center;
     font-family: "Asap", sans-serif;
-    padding: 0.5em;
+    margin: 2px;
+    padding: 15px;
     font-weight: bold;
 }
 
