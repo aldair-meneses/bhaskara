@@ -1,30 +1,49 @@
-const guide_button = document.getElementById('guide_btn')
-// const guide = document.querySelector('#guide_page')
-const modal = document.getElementById('modal_content')
-const close = document.getElementById('close_btn')
-guide_button.addEventListener('click', ()=> {
-    modal.classList.add('show');
+const guide_button = document.querySelector('#guide_btn');
+const guide = document.querySelector('#modal_content');
+const close_guide = document.querySelector('#close_btn');
+const container = document.querySelector('#head_container')
+
+guide_button.addEventListener('click', (event)=> {
+    guide.classList.add('show');
+    if (event.target == guide){
+        guide.classList.remove('show')
+    }
 })
 
-close.addEventListener('click', ()=>{
-    modal.classList.remove('show')
+close_guide.addEventListener('click', ()=>{
+    guide.classList.remove('show');
 })
 
-// window.onclick = function(event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
+// guide.addEventListener('click', function(event){
+//     if (event.target == guide) {
+//         guide.classList.remove('show');
 //     }
-// }
+// })
 
+const a = document.querySelector('#a')
+const b = document.querySelector('#b')
+const c = document.querySelector('#c')
+const x1 = document.querySelector('#x1')
+const x2 = document.querySelector('#x2')
+const calc = document.querySelector('#calc')
 
+function bhaskara(){
+    const $a = a.value;
+    const $b = b.value;
+    const $c = c.value;
 
+    const delta = $b * $b - 4 * $a * $c;
 
+    const $x1 = (-$b + Math.sqrt(delta)) / (2 * $a);
+    const $x2 = (- $b - Math.sqrt(delta)) / (2 * $a);
+    x1.value = $x1;
+    x2.value = $x2;
+    createTxT('O resultado é');
+}
 
+calc.addEventListener('click', bhaskara)
 
-
-
-
-
-// const A  = document.getElementById("a");
-// const B = document.getElementById("b");
-// const C = document.getElementById("c");
+function createTxT(txt){
+    document.querySelector('#txt_result').innerHTML = (`${txt}`)
+    
+}
