@@ -3,6 +3,10 @@ const guide = document.querySelector('#modal_content');
 const close_guide = document.querySelector('#close_btn');
 const container = document.querySelector('#head_container')
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e05b6b46be04a5fd700b4877d3cb323495f244c2
 guide_button.addEventListener('click', (event)=> {
     guide.classList.add('show');
     if (event.target == guide){
@@ -14,6 +18,10 @@ close_guide.addEventListener('click', ()=>{
     guide.classList.remove('show');
 })
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e05b6b46be04a5fd700b4877d3cb323495f244c2
 // guide.addEventListener('click', function(event){
 //     if (event.target == guide) {
 //         guide.classList.remove('show');
