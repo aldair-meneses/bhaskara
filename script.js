@@ -36,7 +36,8 @@ function bhaskara(){
     x1.value = $x1;
     x2.value = $x2;
 
-print_equation(`\\[ x = \\frac{- ${$b} \\pm \\sqrt{${$b}^{2} - 4${$a}${$c}} }{2${$a}} \\]`)
+  // print_equation('\\[ x = \\frac{-b \\pm \\sqrt{b^{2} - 4ac} }{2a} \\]')    
+  print_equation(`\\[ ${$a}x² + ${$b}x + ${$c} = 0 \\]`)
 
     
 }
