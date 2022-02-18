@@ -6,16 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math-ways</title>
     <link href="styles.css" rel="stylesheet"> 
-    <script>
-    MathJax = {
-        loader: {load: ['input/asciimath', 'output/chtml']}
-    }
-    </script>
+    <script src="mathjax-config.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script
-     id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <div class="head-container" id="head_container">    
@@ -27,13 +20,14 @@
         <div id="guide_page" class="guide-content">
             <span id="close_btn" class="close-btn">&times</span>
             <h3>Equação reduzida do segundo grau</h3>
-            <p>`ax^2 + bx + c = 0`</p>
+            <p>${ax^2 + bx + c = 0}$</p>
             <h3>Formula de Bhaskara</h3>
-            <p>`x =( -b \ pm sqrt(b²-4*a*c))/(2*a)`</p>
+            <p>\[x = {-b \pm \sqrt{b^2-4ac} \over 2a}\]</p>
             <h3>Começa por encontrar a discriminante (Delta)</h3>
-            <p>`Delta =( -b pm sqrt(Delta))/(2*a)`</p>
+            <p>${\Delta = -b \pm \sqrt \Delta \over2*a}$</p>
             <h3>após encontrar a discriminante, substitue os valores na fórmula</h3>
-            <p>`x =(-bpmsqrtDelta)/(2*a) `</p>
+            <p>${x =-b \pm \sqrt \Delta \over 2*a}$</p>
+            <p></p>
         </div>
     </div>
     </div>    
@@ -55,14 +49,14 @@
     </div>    
     <div class="result-container" id="result_container">
         <div class="result" id="result">
-            <h1 id="txt_result"></h1>
+            <h1 id="math_result"></h1>
             <input disabled="disabled" id="x1">
             
             <input disabled="disabled" id="x2">
 
         </div>        
+    </script>
     </div> 
     <script src="script.js"></script>
-</section>
 </body>
 </html>

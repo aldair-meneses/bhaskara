@@ -5,20 +5,17 @@ const container = document.querySelector('#head_container')
 
 guide_button.addEventListener('click', (event)=> {
     guide.classList.add('show');
-    if (event.target == guide){
-        guide.classList.remove('show')
-    }
 })
 
 close_guide.addEventListener('click', ()=>{
     guide.classList.remove('show');
 })
 
-// guide.addEventListener('click', function(event){
-//     if (event.target == guide) {
-//         guide.classList.remove('show');
-//     }
-// })
+guide.addEventListener('click', function(event){
+    if (event.target == guide) {
+        guide.classList.remove('show');
+    }
+})
 
 const a = document.querySelector('#a')
 const b = document.querySelector('#b')
@@ -38,12 +35,19 @@ function bhaskara(){
     const $x2 = (- $b - Math.sqrt(delta)) / (2 * $a);
     x1.value = $x1;
     x2.value = $x2;
-    createTxT('O resultado é');
+
+print_equation(`\\[ x = \\frac{- ${$b} \\pm \\sqrt{${$b}^{2} - 4${$a}${$c}} }{2${$a}} \\]`)
+
+    
 }
 
 calc.addEventListener('click', bhaskara)
 
-function createTxT(txt){
-    document.querySelector('#txt_result').innerHTML = (`${txt}`)
-    
+// print_equation('\\[x = {-b \pm \sqrt{b^2-4ac} \over 2a}\\]');
+
+
+function print_equation(equation){
+  const math = document.querySelector('#math_result');
+  math.innerHTML = (equation);
+  MathJax.typeset();
 }
