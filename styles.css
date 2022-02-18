@@ -54,22 +54,17 @@
     background-color: #fefefe;
     border: 1px solid #888;
     width: 700px;
-    height: 450px;
+    height: 460px;
+    overflow: auto;
   }
 
 .guide-content h3{
-    display: flex;
-    justify-content: center;
+    text-align: center;
     font-family: "Asap", sans-serif;
     margin: 2px;
-    padding: 15px;
+    padding: 10px;
     font-weight: bold;
 }
-
-.guide-content p{
-    font-size: 24px;
-}
-
 
 .guide {
     padding: 1.5em;
