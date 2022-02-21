@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,700&display=swap');
+
+* {
+    margin: 0;
+}
+
+
+
+.title {
+    margin: auto;
+    width: 70%;
+    gap: 5px;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+body{
+    background-color: rgb(255,255,255);
+    font-family: 'Asap',  sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+header {
+    width: 100%;
+}
+
+header :nth-child(1){
+    font-size: 36px;
+    font-family: 'Asap', sans-serif;
+    text-align: center;
+}
+
+img {
+    width: 28px;
+    height: 28px;
+}
+
+.guide-btn {    
+    margin-bottom: 1em;
+    background: none;
+    border: none;
+}
+
+.guide-values{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+section {
+    display: flex;
+    margin: auto;
+    width: 70%;
+    border: 1px solid;
+}
+
+form input :nth-child(-n+3){
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
