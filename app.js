@@ -1,21 +1,21 @@
-const guide_button = document.querySelector('#guide_btn');
-const guide = document.querySelector('#modal_content');
-const close_guide = document.querySelector('#close_btn');
-const container = document.querySelector('#head_container')
+// const guide_button = document.querySelector('#guide_btn');
+// const guide = document.querySelector('#modal_content');
+// const close_guide = document.querySelector('#close_btn');
+// const container = document.querySelector('#head_container')
 
-guide_button.addEventListener('click', (event)=> {
-    guide.classList.add('show');
-})
+// guide_button.addEventListener('click', (event)=> {
+//     guide.classList.add('show');
+// })
 
-close_guide.addEventListener('click', ()=>{
-    guide.classList.remove('show');
-})
+// close_guide.addEventListener('click', ()=>{
+//     guide.classList.remove('show');
+// })
 
-guide.addEventListener('click', function(event){
-    if (event.target == guide) {
-        guide.classList.remove('show');
-    }
-})
+// guide.addEventListener('click', function(event){
+//     if (event.target == guide) {
+//         guide.classList.remove('show');
+//     }
+// })
 
 const ax = document.querySelector('#a')
 const bx = document.querySelector('#b')
@@ -46,7 +46,9 @@ function bhaskara(){
     
 }
 
-calc.addEventListener('click', bhaskara)
+calc.addEventListener('click', function(event){
+    event.preventDefault(); bhaskara();
+})
 
 // print_equation('\\[x = {-b \pm \sqrt{b^2-4ac} \over 2a}\\]');
 
