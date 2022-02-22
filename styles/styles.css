@@ -126,7 +126,7 @@ form [type="submit"]{
 .guide-modal {
     background-color: #fefefe;
     margin: 8% auto; 
-    padding: 20px;
+    padding: 2px;
     border: 1px solid #888;
     min-height: 300px; 
     width: 50%;
@@ -138,7 +138,8 @@ form [type="submit"]{
     flex-direction: column;
     padding: 10px;
     gap: 10px;
-    font-size: 20px;
+    font-size: 16px;
+    font-family: 'Asap', sans-serif;
 }
 
 .show {
@@ -150,7 +151,7 @@ form [type="submit"]{
 .close-guide{
     color: #aaa;
     float: right;
-    font-size: 28px;
+    font-size: 36px;
     font-weight: bold;
 }
 

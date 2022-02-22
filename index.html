@@ -22,8 +22,7 @@
                 <img src="/components/images/Vector.svg" alt="guide">
             </span>
             </div>
-    </header>
-    
+    </header>   
 <main> 
     <section>           
         <div  class="guide-container" id="guide_container">
@@ -32,9 +31,12 @@
             <div class="modal-content">
                 <h3>equação reduzida do segundo grau</h3>
                 <p>\[\ ax² + bx + c \]</p>
-                <h3>b</h3>
-                <h3>c</h3>
-                <h3>d</h3>
+                <h3>Fórmula de Bhaskara</h3>
+                <p> \[ x ={ -b \pm \sqrt{ b²- 4\cdot a\cdot c} \over 2\cdot a }\]</p>
+                <h3>Encontrando a discriminante (Delta)</h3>
+                <p>\[\Delta = b² - 4 \cdot a \cdot c \]</p>
+                <h3>Substituindo os valores na Fórmula</h3>
+                <p>\[ x ={ -b \pm \sqrt \Delta \over 2\cdot a} \]</p>
             </div>
             </div>
         </div>
@@ -45,31 +47,26 @@
             <h3>c</h3>
         </div>
         <div class="values">
+        
             <input type="text" name="a" id="a">
         
             <input type="text" name="b" id="b">
         
             <input type="text" name="c" id="c">
+        
         </div>
-            <input type="submit" value="Calcular" id="calc">
-        <div class="result">
-            <input disabled="disabled" class="x1" id="x1">
-            
-            <input disabled="disabled" class="x2" id="x2">
-            
+        <input type="submit" value="Calcular" id="calc">
+        
+            <div class="result">
+        
+                <input disabled="disabled" class="x1" id="x1">
+
+                <input disabled="disabled" class="x2" id="x2">
+
         </div>
         </form>
     </section>
-
     <script src="app.js"></script>
 </main>
-    <!-- <div class="result-container" id="result_container">
-        <div class="result" id="result">
-            <h1 id="math_result"></h1>
-           
-
-    </div>         -->
-        
-    
 </body>
 </html>
