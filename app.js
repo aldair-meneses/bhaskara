@@ -1,21 +1,21 @@
-// const guide_button = document.querySelector('#guide_btn');
-// const guide = document.querySelector('#modal_content');
-// const close_guide = document.querySelector('#close_btn');
-// const container = document.querySelector('#head_container')
+const guide_button = document.querySelector('#guide_btn');
+const guide = document.querySelector('#guide_container');
+const close_guide = document.querySelector('#close_btn');
 
-// guide_button.addEventListener('click', (event)=> {
-//     guide.classList.add('show');
-// })
 
-// close_guide.addEventListener('click', ()=>{
-//     guide.classList.remove('show');
-// })
+guide_button.addEventListener('click', ()=> {
+    guide.style.display = ('flex');
+})
 
-// guide.addEventListener('click', function(event){
-//     if (event.target == guide) {
-//         guide.classList.remove('show');
-//     }
-// })
+close_guide.addEventListener('click', ()=>{
+    guide.style.display = ('none')
+})
+
+guide.addEventListener('click', function(event){
+    if (event.target == guide) {
+        guide.style.display = ('none');
+    }
+})
 
 const ax = document.querySelector('#a')
 const bx = document.querySelector('#b')
@@ -52,7 +52,6 @@ calc.addEventListener('click', (event)=>{
 })
 
 // print_equation('\\[x = {-b \pm \sqrt{b^2-4ac} \over 2a}\\]');
-
 
 function print_equation(equation){
   const math = document.querySelector('#math_result');
