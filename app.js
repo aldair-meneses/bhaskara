@@ -2,18 +2,17 @@ const guide_button = document.querySelector('#guide_btn');
 const guide = document.querySelector('#guide_container');
 const close_guide = document.querySelector('#close_btn');
 
-
 guide_button.addEventListener('click', ()=> {
-    guide.style.display = ('flex');
+    guide.classList.add('show');
 })
 
 close_guide.addEventListener('click', ()=>{
-    guide.style.display = ('none')
+    guide.classList.remove('show')
 })
 
 guide.addEventListener('click', function(event){
     if (event.target == guide) {
-        guide.style.display = ('none');
+        guide.classList.remove('show')
     }
 })
 

@@ -9,12 +9,10 @@
     padding: 1em;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-
 }
 
 body{
-    background-color: rgb(255,255,255);
+    background-color: rgb(255,2555,255);
     font-family: sans-serif;
     max-width: 1200px;
     margin: 0 auto;
@@ -28,24 +26,21 @@ header {
 }
 
 header :nth-child(1){
-    padding: 0.5em;
+    gap: 20px;
     font-size: 36px;
     font-family: 'Asap', sans-serif;
     text-align: center;
 }
 
 img {
-    width: 28px;
-    height: 28px;
+    background: none;
+    width: 45px;
+    height: 45px;
     cursor: pointer;
-    padding: 0 10px;
 }
 
-.guide-btn {   
-    display: flex;
-    margin: auto; 
-    background: none;
-    border: none;
+img:hover {
+    transform: scale(1.2);
 }
 
 .guide-values {
@@ -114,9 +109,11 @@ form [type="submit"]{
 }
 
 .guide-container {
-    display: none;
+    user-select: none;
+    pointer-events: none;
     position: fixed;
-    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
     left: 0;
     top: 0;
     width: 100%;
@@ -144,6 +141,12 @@ form [type="submit"]{
     font-size: 20px;
 }
 
+.show {
+    pointer-events: auto;
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+}
+
 .close-guide{
     color: #aaa;
     float: right;
@@ -153,8 +156,10 @@ form [type="submit"]{
 
 .close-guide:hover,
 .close-guide:focus {
+    float: right;
+    display: flex;
     color: black;
     text-decoration: none;
-    cursor: pointer;
+    cursor: pointer;    
 }
 

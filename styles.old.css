@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,700&display=swap');
+
+* {
+    margin: 0;   
+}
+
+.modal {
+    overflow: auto; 
+    margin: auto;
+    padding-top: 2em;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    width: 500px; 
+    height: 500px; 
+    background-color: rgba(0,0,0,0.4);   
+    transition: opacity 0.3s ease;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+}
+
+.modal.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.close-btn {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #aaaaaa;
+    font-size: 30px;
+    float: right;
+    margin-right: 10px;
+    font-weight: bold;
+    
+}
+
+.close-btn:hover, .close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+form input{ 
+    margin: 0auto;
+    justify-content: space-between;
+}
