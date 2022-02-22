@@ -46,8 +46,9 @@ function bhaskara(){
     
 }
 
-calc.addEventListener('click', function(event){
-    event.preventDefault(); bhaskara();
+calc.addEventListener('click', (event)=>{
+    event.preventDefault();
+    bhaskara();
 })
 
 // print_equation('\\[x = {-b \pm \sqrt{b^2-4ac} \over 2a}\\]');
