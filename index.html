@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math-ways</title>
     <link href="/styles/styles.css" rel="stylesheet"> 
+    <link href="/styles/media.css" rel="stylesheet"> 
+ 
     <!-- <link href="/styles/fonts.css" rel="stylesheet"> -->
                 <!-- MathJax import -->
     <script src="mathjax-config.js"></script>
@@ -16,35 +18,36 @@
     <header>
         <div class="title">
         <h1>Fórmula de Bhaskara</h1> 
-        <button class="guide-btn" id="guide_btn"><img src="/components/images/Vector.svg" alt="help"></button>
+        <button class="guide-btn" id="guide_btn"><img src="/components/images/Vector.svg" alt="help"></button> 
         </div>
     </header>
-    <h3>ax²</h3>
-    <h3>bx</h3>
-    <h3>c</h3>   
-    <section>
-        <div class="guide-values">
-           
-        </div>
+<main>
+    <section>    
         <form>
+        <div class="guide-values">
+            <h3>ax²</h3>
+            <h3>bx</h3>
+            <h3>c</h3>
+        </div>
+        <div class="values">
             <input type="text" name="a" id="a">
         
             <input type="text" name="b" id="b">
         
             <input type="text" name="c" id="c">
-
+        </div>
+            <input type="submit" value="Calcular" id="calc">
+        <div class="result">
+            <input disabled="disabled" class="x1" id="x1">
             
-        <div id="result">
-            <input disabled="disabled" id="x1">
-            
-            <input disabled="disabled" id="x2">
+            <input disabled="disabled" class="x2" id="x2">
             
         </div>
-        
-        <input type="submit" value="Calcular" id="calc">
         </form>
     </section>
+
     <script src="app.js"></script>
+</main>
     <!-- <div class="result-container" id="result_container">
         <div class="result" id="result">
             <h1 id="math_result"></h1>
