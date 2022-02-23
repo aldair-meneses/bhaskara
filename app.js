@@ -1,19 +1,29 @@
 const guide_button = document.querySelector('#guide_btn');
+
 const guide = document.querySelector('#guide_container');
+
+const imgs = document.querySelectorAll('#drag_off')
+
+window.addEventListener('load', ()=> {
+    for (let img of imgs){
+        img.draggable = false;   
+}
+})
+
 const close_guide = document.querySelector('#close_btn');
 
 guide_button.addEventListener('click', ()=> {
     guide.classList.add('show');
 })
 
-close_guide.addEventListener('click', ()=>{
-    guide.classList.remove('show')
+guide.addEventListener('click', (event)=>{
+    if (event.target == guide) {
+        guide.classList.remove('show');
+    }
 })
 
-guide.addEventListener('click', function(event){
-    if (event.target == guide) {
-        guide.classList.remove('show')
-    }
+close_guide.addEventListener('click', ()=>{
+    guide.classList.remove('show')
 })
 
 const ax = document.querySelector('#a')

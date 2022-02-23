@@ -13,7 +13,7 @@
 
 body{
     background-color: rgb(255,2555,255);
-    font-family: sans-serif;
+    font-family: 'Asap', sans-serif;
     max-width: 1200px;
     margin: 0 auto;
     padding: 30px;
@@ -33,6 +33,7 @@ header :nth-child(1){
 }
 
 img {
+    border: none;
     background: none;
     width: 45px;
     height: 45px;
@@ -101,6 +102,18 @@ form [type="submit"]{
     gap: 10px;
     text-align: center;
 }
+
+.x {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 8.5em;
+    font-family: 'Asap', sans-serif;
+}
+
+
 
 .result input {
     text-align: center;
