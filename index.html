@@ -21,56 +21,51 @@
             <span class="guide-btn" id="guide_btn" ><?xml version="1.0" encoding="UTF-8"?>
                 <img id="drag_off" src="/components/images/Vector.svg"  alt="guide">
             </span>
-            </div>
+        </div>
     </header>   
 <main> 
-    <section>           
-        <div  class="guide-container" id="guide_container">
-            <div class ="guide-modal">
-                <span class="close-guide" id="close_btn">&times</span>
-            <div class="modal-content">
-                <h3>equação reduzida do segundo grau</h3>
-                <p>\[\ ax² + bx + c \]</p>
-                <h3>Fórmula de Bhaskara</h3>
-                <p> \[ x ={ -b \pm \sqrt{ b²- 4\cdot a\cdot c} \over 2\cdot a }\]</p>
-                <h3>Encontrando a discriminante (Delta)</h3>
-                <p>\[\Delta = b² - 4 \cdot a \cdot c \]</p>
-                <h3>Substituindo os valores na Fórmula</h3>
-                <p>\[ x ={ -b \pm \sqrt \Delta \over 2\cdot a} \]</p>
-            </div>
-            </div>
+<section>           
+<div  class="guide-container" id="guide_container">            
+    <div class ="guide-modal">
+        <span class="close-guide" id="close_btn">&times</span>
+        <div class="modal-content">
+            <h3>equação reduzida do segundo grau</h3>
+            <p>\[\ ax² + bx + c \]</p>
+            <h3>Fórmula de Bhaskara</h3>
+            <p> \[ x ={ -b \pm \sqrt{ b²- 4\cdot a\cdot c} \over 2\cdot a }\]</p>
+            <h3>Encontrando a discriminante (Delta)</h3>
+            <p>\[\Delta = b² - 4 \cdot a \cdot c \]</p>
+            <h3>Substituindo os valores na Fórmula</h3>
+            <p>\[ x ={ -b \pm \sqrt \Delta \over 2\cdot a} \]</p>
         </div>
-        <form>
-        <div class="guide-values">
-            <h3>ax²</h3>
-            <h3>bx</h3>
-            <h3>c</h3>
-        </div>
-        <div class="values">
-        
-            <input type="text" name="a" id="a">
-        
-            <input type="text" name="b" id="b">
-        
-            <input type="text" name="c" id="c">
-        
-        </div>
-        <input type="submit" value="Calcular" id="calc">
-        
-        <div class="x">
-        <h2>X1</h2>
-        <h2>X2</h2>
-        </div>
-            <div class="result">
-                
-                <input disabled="disabled" class="x1" id="x1">
-                
-                <input disabled="disabled" class="x2" id="x2">
+    </div>
+</div>
+<form>
+    <div class="guide-values">
+        <h3>ax²</h3>
+        <h3>bx</h3>
+        <h3>c</h3>
+    </div>
+    <div class="values">
+    
+        <input type="text" name="a" id="a">
+    
+        <input type="text" name="b" id="b">
+    
+        <input type="text" name="c" id="c">
+    
+    </div>
+    <input type="submit" value="Calcular" id="calc">
+        <div class="result-container" id="result-container">
+                <h1>Math-ways</h1>
+                <p class="result-modal" id="result_modal">
 
-            </div>
-        </form>
-    </section>
-    <script src="app.js"></script>
+                </p>
+            
+        </div>
+</form>
+</section>
+<script src="app.js"></script>
 </main>
 </body>
 </html>

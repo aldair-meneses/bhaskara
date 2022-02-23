@@ -1,7 +1,3 @@
-const guide_button = document.querySelector('#guide_btn');
-
-const guide = document.querySelector('#guide_container');
-
 const imgs = document.querySelectorAll('#drag_off')
 
 window.addEventListener('load', ()=> {
@@ -11,6 +7,8 @@ window.addEventListener('load', ()=> {
 })
 
 const close_guide = document.querySelector('#close_btn');
+const guide_button = document.querySelector('#guide_btn');
+const guide = document.querySelector('#guide_container');
 
 guide_button.addEventListener('click', ()=> {
     guide.classList.add('show');
@@ -29,9 +27,8 @@ close_guide.addEventListener('click', ()=>{
 const ax = document.querySelector('#a')
 const bx = document.querySelector('#b')
 const C = document.querySelector('#c')
-const x1 = document.querySelector('#x1')
-const x2 = document.querySelector('#x2')
 const calc = document.querySelector('#calc')
+const result = document.querySelector('#result-container')
 
 function bhaskara(){
     const a = ax.value;
@@ -46,24 +43,23 @@ function bhaskara(){
     else{
     const $x1 = (-b + Math.sqrt(delta)) / (2 * a);
     const $x2 = (- b - Math.sqrt(delta)) / (2 * a);
-    x1.value = $x1;
-    x2.value = $x2;
 
-  print_equation(`\\[ x = \\frac{-${b} \\pm \\sqrt{${b}^{2} - 4\\cdot (${a}\\cdot ${c})} }{2\\cdot (${a}) } \\]`)    
-//   print_equation(`\\[ ${a}x² + ${b}x + ${$c} = 0 \\]`)
-    }
-    
+    print_equation(`\\[ ${a}x² + ${b}x + ${c} = 0 \\]`);
+    }   
+}
+
+function show_math_solution(){
+    result.classList.add('show-result')
 }
 
 calc.addEventListener('click', (event)=>{
     event.preventDefault();
     bhaskara();
+    show_math_solution();
 })
 
-// print_equation('\\[x = {-b \pm \sqrt{b^2-4ac} \over 2a}\\]');
-
 function print_equation(equation){
-  const math = document.querySelector('#math_result');
+  const math = document.querySelector('#result_modal');
   math.innerHTML = (equation);
   MathJax.typeset();
 }

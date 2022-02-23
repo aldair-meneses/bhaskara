@@ -12,7 +12,7 @@
 }
 
 body{
-    background-color: rgb(255,2555,255);
+    background-color: #d9e9f3;
     font-family: 'Asap', sans-serif;
     max-width: 1200px;
     margin: 0 auto;
@@ -103,18 +103,6 @@ form [type="submit"]{
     text-align: center;
 }
 
-.x {
-    margin: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    gap: 8.5em;
-    font-family: 'Asap', sans-serif;
-}
-
-
-
 .result input {
     text-align: center;
     height: 3em;
@@ -157,6 +145,7 @@ form [type="submit"]{
 
 .show {
     pointer-events: auto;
+    z-index: 1;
     opacity: 1;
     transition: opacity 0.3s ease-in;
 }
@@ -177,3 +166,29 @@ form [type="submit"]{
     cursor: pointer;    
 }
 
+.result-container {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    transition: opacity 0.3s ease-in;
+    opacity: 0;
+    background-color: #ffffff;
+}
+
+.result-container h1{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.show-result {
+    opacity: 1;
+}
+
+.result-modal {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    font-size: 18px;
+    text-align: center;
+}
