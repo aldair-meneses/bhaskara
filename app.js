@@ -30,6 +30,7 @@ const C = document.querySelector('#c')
 const calc = document.querySelector('#calc')
 const result = document.querySelector('#result-container')
 
+
 function bhaskara(){
     const a = ax.value;
     const b = bx.value;
@@ -45,6 +46,7 @@ function bhaskara(){
     const $x2 = (- b - Math.sqrt(delta)) / (2 * a);
 
     print_equation(`\\[ ${a}x² + ${b}x + ${c} = 0 \\]`);
+    print_delta(`\\[ \\Delta = ${b}^2 \\]`);
     }   
 }
 
@@ -59,7 +61,13 @@ calc.addEventListener('click', (event)=>{
 })
 
 function print_equation(equation){
-  const math = document.querySelector('#result_modal');
-  math.innerHTML = (equation);
-  MathJax.typeset();
+    let reduced_eq = document.querySelector('#reduced_equation')
+    reduced_eq.innerHTML = (equation);
+    MathJax.typeset();
+}
+
+function print_delta(delta_equation){
+    delta_eq = document.querySelector('#delta_equation')
+    delta_eq.innerHTML = (delta_equation);
+    MathJax.typeset();
 }
