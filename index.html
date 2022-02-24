@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math-ways</title>
+    <title>Ez-Math</title>
     <link href="/styles/styles.css" rel="stylesheet"> 
     <link href="/styles/media.css" rel="stylesheet"> 
  
@@ -34,7 +34,7 @@
             <h3>Fórmula de Bhaskara</h3>
             <p> \[ x ={ -b \pm \sqrt{ b²- 4\cdot a\cdot c} \over 2\cdot a }\]</p>
             <h3>Encontrando a discriminante (Delta)</h3>
-            <p>\[\Delta = b² - 4 \cdot a \cdot c \]</p>
+            <p>\[\Delta = b² - 4 \cdot a \cdot c\]</p>
             <h3>Substituindo os valores na Fórmula</h3>
             <p>\[ x ={ -b \pm \sqrt \Delta \over 2\cdot a} \]</p>
         </div>
@@ -55,14 +55,15 @@
         <input type="text" name="c" id="c">
     
     </div>
+    <h3 id="error"></h3>
     <input type="submit" value="Calcular" id="calc">
-        <div class="result-container" id="result-container">
-                <h1>Math-ways</h1>
-                <p class="result-modal" id="reduced_equation">
-                <p class="result-modal" id="delta_equation">class</p>
-                </p>
-            
-        </div>
+    <div class="result-container" id="result_container">
+        <span id="window_result">quadro de resposta</span>
+        <p id="eq_example"></p>
+        <p id="equation"></p>
+        <p id="delta_example"></p>
+        <p id="delta"></p>
+    </div>
 </form>
 </section>
 <script src="app.js"></script>

@@ -15,12 +15,7 @@
         align-self: center;
         height: 30px;
     }
-    .result input {
-        align-self: center;
-        text-align: center;
-        height: 2em;
-        border: 2px solid black;
-    }
+    
     .title {
         flex-direction: row;
         width: 80%;

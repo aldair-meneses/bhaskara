@@ -16,7 +16,7 @@ body{
     font-family: 'Asap', sans-serif;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 30px; 
 }
 
 
@@ -94,21 +94,6 @@ form [type="submit"]{
     font-weight: bold;
 }
 
-
-.result { 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    text-align: center;
-}
-
-.result input {
-    text-align: center;
-    height: 3em;
-    border: 2px solid black;
-}
-
 .guide-container {
     user-select: none;
     pointer-events: none;
@@ -166,29 +151,22 @@ form [type="submit"]{
     cursor: pointer;    
 }
 
+
+
 .result-container {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    border: 2px solid black;
+    min-height: 250px;
+    background-color: #ffffff;
+    overflow: auto;
+}
+
+
+.result-container p {
     display: flex;
     justify-content: center;
-    border: 1px solid black;
-    transition: opacity 0.3s ease-in;
-    opacity: 0;
-    background-color: #ffffff;
-}
-
-.result-container h1{
     margin: 0 auto;
-    text-align: center;
-}
-
-.show-result {
-    opacity: 1;
-}
-
-.result-modal {
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    font-size: 18px;
-    text-align: center;
+    width: 50%;
 }
