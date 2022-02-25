@@ -21,8 +21,6 @@ close_guide.addEventListener('click', ()=>{
     guide.classList.remove('show')
 });
 
-
-
 const ax = document.querySelector('#a')
 const bx = document.querySelector('#b')
 const C = document.querySelector('#c')
@@ -48,8 +46,10 @@ function bhaskara(){
     print_equation(`\\[ ax² + bx + c \\]`, 'eq_example');
     print_equation(`\\[ \\Delta = b^2 - 4 \\cdot a \\cdot c\\]`, 'delta_example');
     print_equation(`\\[ \\Delta = ${b}^2 - 4 \\cdot ${a} \\cdot ${c}\\]`, 'delta');
-    print_equation(`\\[\\Delta = ${delta} \\]`,'delta_solved')
-    print_equation(`\\[ x = {-${b} \\pm \\sqrt{\\Delta } \\over 2 \\cdot (${a})} \\]`, 'bhaskara-solve');
+    print_equation(`\\[\\Delta = ${delta} \\]`,'delta_solved');
+    print_equation(`\\[ x = {-${b} \\pm \\sqrt{${delta} } \\over 2 \\cdot (${a})} \\]`, 'bhaskara-solve');
+    print_equation(`\\[ x' = ${$x1} \\]`, 'x1');
+    print_equation(`\\[ x'' =  ${$x2} \\]`, 'x2');
     }   
 };
 
@@ -58,8 +58,6 @@ function print_equation(equation, id) {
     math.innerHTML = (equation)
     MathJax.typeset();
 };
-
-
 
 calc.addEventListener('click', (event)=>{
     let window_guide = document.querySelectorAll('.window-guide');
@@ -70,13 +68,3 @@ calc.addEventListener('click', (event)=>{
     bhaskara();
 });
 
-
-
-// globalThis.addEventListener('load', ()=>{
-//     bhaskara();
-//     let window_guide = document.querySelectorAll('.window-guide');
-//     for (guides of window_guide){
-//         guides.style.display = ('block')
-//     }
-    
-// })
