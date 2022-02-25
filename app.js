@@ -43,11 +43,13 @@ function bhaskara(){
     const $x1 = (-b + Math.sqrt(delta)) / (2 * a);
     const $x2 = (- b - Math.sqrt(delta)) / (2 * a);
     window_txt.remove();
-    print_equation(`\\[ \\Delta = b^2 - 4 \\cdot a \\cdot c\\]`, 'delta_example')
-    print_equation(`\\[ ax² + bx + c \\]`, 'eq_example')
-    print_equation(`\\[\\ ${a}² + ${b}x + c \\]`, 'equation')
-    print_equation(`\\[ \\Delta = ${b}^2 - 4 \\cdot ${a} \\cdot ${c}\\]`, 'delta')
-
+    print_equation(`\\[x = {-b \\pm \\sqrt{ b^2 -4 \\cdot a \\cdot c} \\over 2 \\cdot a} \\]`, 'bhaskara');
+    print_equation(`\\[ a = ${a} \\quad b = ${b} \\quad  c = ${c} \\]`, 'equation');
+    print_equation(`\\[ ax² + bx + c \\]`, 'eq_example');
+    print_equation(`\\[ \\Delta = b^2 - 4 \\cdot a \\cdot c\\]`, 'delta_example');
+    print_equation(`\\[ \\Delta = ${b}^2 - 4 \\cdot ${a} \\cdot ${c}\\]`, 'delta');
+    print_equation(`\\[\\Delta = ${delta} \\]`,'delta_solved')
+    print_equation(`\\[ x = {-${b} \\pm \\sqrt{\\Delta } \\over 2 \\cdot (${a})} \\]`, 'bhaskara-solve');
     }   
 };
 
@@ -64,8 +66,17 @@ calc.addEventListener('click', (event)=>{
     for (guides of window_guide){
         guides.style.display = ('block')
     }
-
     event.preventDefault();
     bhaskara();
 });
 
+
+
+// globalThis.addEventListener('load', ()=>{
+//     bhaskara();
+//     let window_guide = document.querySelectorAll('.window-guide');
+//     for (guides of window_guide){
+//         guides.style.display = ('block')
+//     }
+    
+// })
