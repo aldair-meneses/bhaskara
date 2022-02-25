@@ -3,6 +3,11 @@
       flex-direction: column;
     }
 
+    img {
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
     main {
         flex-direction: column;
     }

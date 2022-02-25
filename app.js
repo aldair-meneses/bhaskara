@@ -37,7 +37,17 @@ function bhaskara(){
     if (a == ''){
         print_equation('O valor de A não pode ser nulo ou zero.', 'error')
     }
-    else{
+    else if (delta < 0){
+        print_equation(`\\[x = {-b \\pm \\sqrt{ b^2 -4 \\cdot a \\cdot c} \\over 2 \\cdot a} \\]`, 'bhaskara');
+        print_equation(`\\[ a = ${a} \\quad b = ${b} \\quad  c = ${c} \\]`, 'equation');
+        print_equation(`\\[ ax² + bx + c \\]`, 'eq_example');
+        print_equation(`\\[ \\Delta = b^2 - 4 \\cdot a \\cdot c\\]`, 'delta_example');
+        print_equation(`\\[ \\Delta = ${b}^2 - 4 \\cdot ${a} \\cdot ${c}\\]`, 'delta');
+        print_equation(`\\[\\Delta = ${delta} \\]`,'delta_solved');
+        print_equation('a equação não possui raizes reais', 'error')
+    }
+
+    else {
     const $x1 = (-b + Math.sqrt(delta)) / (2 * a);
     const $x2 = (- b - Math.sqrt(delta)) / (2 * a);
     window_txt.remove();
@@ -47,7 +57,8 @@ function bhaskara(){
     print_equation(`\\[ \\Delta = b^2 - 4 \\cdot a \\cdot c\\]`, 'delta_example');
     print_equation(`\\[ \\Delta = ${b}^2 - 4 \\cdot ${a} \\cdot ${c}\\]`, 'delta');
     print_equation(`\\[\\Delta = ${delta} \\]`,'delta_solved');
-    print_equation(`\\[ x = {-${b} \\pm \\sqrt{${delta} } \\over 2 \\cdot (${a})} \\]`, 'bhaskara-solve');
+    print_equation(`\\[ Se x \\in \\mathbb{R}\\ então \\sqrt{x^{2}} = |x|$.\\]`,'bhaskara-solve')
+    // print_equation(`\\[ x = {-${b} \\pm \\sqrt{${delta} } \\over 2 \\cdot (${a})} \\]`, 'bhaskara-solve');
     print_equation(`\\[ x' = ${$x1} \\]`, 'x1');
     print_equation(`\\[ x'' =  ${$x2} \\]`, 'x2');
     }   
@@ -59,7 +70,7 @@ function print_equation(equation, id) {
     MathJax.typeset();
 };
 
-calc.addEventListener('click', (event)=>{
+globalThis.addEventListener('load', (event)=>{
     let window_guide = document.querySelectorAll('.window-guide');
     for (guides of window_guide){
         guides.style.display = ('block')

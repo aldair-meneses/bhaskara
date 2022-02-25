@@ -35,8 +35,8 @@ header :nth-child(1){
 img {
     border: none;
     background: none;
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
 }
 
@@ -161,7 +161,7 @@ form [type="submit"]{
     border: 2px solid black;
     min-height: 250px;
     background-color: #ffffff;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 
