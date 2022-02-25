@@ -1,9 +1,6 @@
-const imgs = document.querySelectorAll('#drag_off')
-
 window.addEventListener('load', ()=> {
-    for (let img of imgs){
-        img.draggable = false;   
-    }
+    let imgs = document.querySelector('#drag_off');
+        imgs.draggable = false;
 });
 
 const close_guide = document.querySelector('#close_btn');
@@ -18,7 +15,7 @@ guide.addEventListener('click', (event)=>{
     if (event.target == guide) {
         guide.classList.remove('show');
     }
-})
+});
 
 close_guide.addEventListener('click', ()=>{
     guide.classList.remove('show')
@@ -49,19 +46,25 @@ function bhaskara(){
     print_equation(`\\[ \\Delta = b^2 - 4 \\cdot a \\cdot c\\]`, 'delta_example')
     print_equation(`\\[ ax² + bx + c \\]`, 'eq_example')
     print_equation(`\\[\\ ${a}² + ${b}x + c \\]`, 'equation')
-    print_equation(`\\[\\ \\Delta = ${b}^2 - 4 \\cdot ${a} \\cdot ${c}\\]`, 'delta')
+    print_equation(`\\[ \\Delta = ${b}^2 - 4 \\cdot ${a} \\cdot ${c}\\]`, 'delta')
 
     }   
-}
+};
 
 function print_equation(equation, id) {
-    let math = document.querySelector(`#${id}`)
+    let math = document.getElementById(`${id}`)
     math.innerHTML = (equation)
     MathJax.typeset();
 };
 
 
+
 calc.addEventListener('click', (event)=>{
+    let window_guide = document.querySelectorAll('.window-guide');
+    for (guides of window_guide){
+        guides.style.display = ('block')
+    }
+
     event.preventDefault();
     bhaskara();
 });

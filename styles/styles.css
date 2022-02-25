@@ -92,6 +92,7 @@ form [type="submit"]{
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
+    background-color: #8b8a8a;
 }
 
 .guide-container {
@@ -170,3 +171,8 @@ form [type="submit"]{
     margin: 0 auto;
     width: 50%;
 }
+
+.window-guide {
+    display: none;
+}
+

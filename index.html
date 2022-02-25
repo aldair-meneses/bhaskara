@@ -17,6 +17,7 @@
 <body>
     <header>
         <div class="title">
+            
             <h1>Fórmula de Bhaskara</h1> 
             <span class="guide-btn" id="guide_btn" ><?xml version="1.0" encoding="UTF-8"?>
                 <img id="drag_off" src="/components/images/Vector.svg"  alt="guide">
@@ -48,20 +49,24 @@
     </div>
     <div class="values">
     
-        <input type="text" name="a" id="a">
+        <input type="text" name="a" id="a" >
     
-        <input type="text" name="b" id="b">
+        <input type="text" name="b" id="b" >
     
-        <input type="text" name="c" id="c">
+        <input type="text" name="c" id="c" >
     
     </div>
     <h3 id="error"></h3>
     <input type="submit" value="Calcular" id="calc">
     <div class="result-container" id="result_container">
         <span id="window_result">quadro de resposta</span>
+        <h4 class="window-guide" id="window_guide">equação do segundo grau</h4>
         <p id="eq_example"></p>
+        <h4 class="window-guide" id="window_guide">Substituindo valores</4>
         <p id="equation"></p>
+        <h4 class="window-guide" id="window_guide">discriminante</h4>
         <p id="delta_example"></p>
+        <h4 class="window-guide" id="window_guide">Substituindo os valores</h4>
         <p id="delta"></p>
     </div>
 </form>
