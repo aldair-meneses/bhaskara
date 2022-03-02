@@ -1,8 +1,7 @@
-export {print_equation, guides, drag, window_result}
-
+export {guides, drag, print_equation, window_result}
 
 function print_equation(equation, id) {
-    let math = document.getElementById(`${id}`);
+    const math = document.getElementById(`${id}`);
     math.innerHTML = (equation);
 }
 
