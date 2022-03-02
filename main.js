@@ -1,11 +1,7 @@
-// import {PrintEquation} from './module.js';
-import dragOff from './module';
-
 window.addEventListener('load', ()=> {
-    dragOff.draggable = 'false';
+    const drag =  document.getElementById('drag_off');
+    drag.draggable = false;
 });    
-
-
 
 const close_guide = document.querySelector('#close_btn');
 const guide_button = document.querySelector('#guide_btn');
@@ -30,8 +26,6 @@ const bx = document.querySelector('#b');
 const c_ = document.querySelector('#c');
 const calc = document.querySelector('#calc');
 const window_txt = document.querySelector('#window_result');
-
-
 
 function bhaskara(){
     const a = ax.value;
