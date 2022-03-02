@@ -1,4 +1,4 @@
-import {print_equation} from "./module";
+import {print_equation} from "./module.js";
 
 globalThis.addEventListener('load', ()=> {
     const drag =  document.getElementById('drag_off');
