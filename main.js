@@ -1,4 +1,6 @@
-window.addEventListener('load', ()=> {
+import {print_equation} from "./module";
+
+globalThis.addEventListener('load', ()=> {
     const drag =  document.getElementById('drag_off');
     drag.draggable = false;
 });    
@@ -31,8 +33,9 @@ function bhaskara(){
     const a = ax.value;
     const b = bx.value;
     const c = c_.value;
-
     const delta = b * b - 4 * a * c;
+    
+    print_equation('funciou amigo', 'error')
 };
 
 calc.addEventListener('click', (event)=>{
