@@ -1,7 +1,8 @@
 import {print_equation} from "./module.js";
 
-globalThis.addEventListener('load', ()=> {
-    const drag =  document.getElementById('drag_off');
+const drag = document.getElementById('drag_off');
+
+drag.addEventListener("loadedmetadata", ()=> {
     drag.draggable = false;
 });    
 
