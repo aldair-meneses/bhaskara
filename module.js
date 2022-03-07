@@ -1,4 +1,4 @@
-import { non_root } from "./equations.js"
+import { non_root, two_roots } from "./equations.js"
 export { more_info, how_to, drag, equation }
 
 function more_info(){
@@ -35,25 +35,9 @@ function drag(){
     drag.draggable = false;
 }
 
-
-function print_equation(equation, id) {
-    const math = document.getElementById(`${id}`);
-    math.innerHTML = (equation);
-}
-
-function equation(delta){
-    if (delta < 0 ){
-        non_root();
-        print_equation("\\[x =  {-b \\pm \\sqrt { b^2 -4 \\cdot a \\cdot c } \\over 2 \\cdot a}  \\]","formula");
-        print_equation("\\[ax^2 + bx + c = 0 \\]", "equation_ex");    
-        print_equation(`\\[ a = ${a.value} \\quad b = ${b.value} \\quad  c = ${c.value} \\]`, "add_equation");
-        print_equation("\\[ \\Delta = {b^2 - 4 \\cdot a \\cdot c }\\]", "delta_ex");
-        print_equation(`\\[ \\Delta = {${b.value}^2 - 4 \\cdot ${a.value} \\cdot ${c.value}} \\]`,"add_delta")
-        print_equation(`\\[ \\Delta = ${delta}\\]`,"delta_solved");        
-    }
-    else {
-        
-    }
+function equation(delta, sqrt_delta){
+    return (delta < 0) ? non_root(delta)  
+        : two_roots(delta,sqrt_delta);
 }
 
     

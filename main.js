@@ -15,8 +15,9 @@ function bhaskara(){
     let b = bx.value;
     let c = $c.value;
     let $delta = b ** 2 - 4 * a * c;
-    let x1 = 
-    equation($delta);
+    let $sqrt_delta = Math.sqrt($delta);
+    equation($delta, $sqrt_delta);
+
     
     MathJax.typeset();    
 }
