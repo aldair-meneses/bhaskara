@@ -52,6 +52,7 @@ function equation(delta){
         print_equation(`\\[ \\Delta = ${delta}\\]`,"delta_solved");        
     }
     else {
+        
     }
 }
 
