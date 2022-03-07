@@ -28,6 +28,9 @@ function how_to(how){
     for (how of how_to_half){
         how.style.display = ("block");
     }
+    if (a.value == ''){
+        window_result.style.display = ("block") 
+    }
 }
 
 function drag(){
@@ -37,6 +40,7 @@ function drag(){
 
 function equation(delta, sqrt_delta){
     return (delta < 0) ? non_root(delta)  
+        : (a.value == '') ? how_to()
         : two_roots(delta,sqrt_delta);
 }
 

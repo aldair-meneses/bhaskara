@@ -152,8 +152,6 @@ form [type="button"]{
     cursor: pointer;    
 }
 
-
-
 .result-container {
     display: flex;
     flex-direction: column;
@@ -164,12 +162,11 @@ form [type="button"]{
     overflow-y: auto;
 }
 
-
-.result-container p {
+.result-container p, h4 {
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    width: 50%;
+    margin-top: 10px;
 }
 
 
