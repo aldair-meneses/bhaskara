@@ -1,5 +1,6 @@
 export {non_root}
 
+
 function generate_doc(sub_txt,id){
     let ex = document.getElementById(`${id}`);
     ex.innerHTML = (sub_txt);
