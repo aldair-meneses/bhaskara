@@ -1,46 +1,18 @@
-import {print_equation} from "./module.js";
+import {drag, more_info, variables} from "./module.js";
 
-const drag = document.getElementById('drag_off');
 
-drag.addEventListener("loadedmetadata", ()=> {
-    drag.draggable = false;
-});    
+// globalThis.addEventListener("load", ()=>{
+//     more_info();
+// })
 
-const close_guide = document.querySelector('#close_btn');
-const guide_button = document.querySelector('#guide_btn');
-const help = document.querySelector('#guide_container');
 
-guide_button.addEventListener('click', ()=> {
-    help.classList.add('show');
+const calc = document.querySelector("#calc");
+
+// function bhaskara(){    
+//     variables();
+// }
+
+calc.addEventListener("click", ()=>{
+    drag();
+    variables();
 });
-
-help.addEventListener('click', (event)=>{
-    if (event.target == help) {
-        help.classList.remove('show');
-    }
-});
-
-close_guide.addEventListener('click', ()=>{
-    help.classList.remove('show')
-});
-
-const ax = document.querySelector('#a');
-const bx = document.querySelector('#b');
-const c_ = document.querySelector('#c');
-const calc = document.querySelector('#calc');
-const window_txt = document.querySelector('#window_result');
-
-function bhaskara(){
-    const a = ax.value;
-    const b = bx.value;
-    const c = c_.value;
-    const delta = b * b - 4 * a * c;
-    
-    print_equation('funciou amigo', 'error')
-};
-
-calc.addEventListener('click', (event)=>{
-    event.preventDefault();
-    bhaskara();
-});
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              

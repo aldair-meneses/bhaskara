@@ -83,7 +83,7 @@ input {
     border-left: none;
 }
 
-form [type="submit"]{
+form [type="button"]{
     width: 160px;
     height: 40px;
     margin: 20px;
@@ -173,7 +173,7 @@ form [type="submit"]{
 }
 
 
-.window-guide {
+.half{
     display: none;
 }
 
