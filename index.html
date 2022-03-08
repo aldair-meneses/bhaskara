@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math-ways</title>
+    <title>Ez-Math</title>
     <link href="/styles/styles.css" rel="stylesheet"> 
     <link href="/styles/media.css" rel="stylesheet"> 
- 
-    <!-- <link href="/styles/fonts.css" rel="stylesheet"> -->
-                <!-- MathJax import -->
     <script src="mathjax-config.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -17,44 +14,75 @@
 <body>
     <header>
         <div class="title">
-        <h1>Fórmula de Bhaskara</h1> 
-        <button class="guide-btn" id="guide_btn"><img src="/components/images/Vector.svg" alt="help"></button> 
-        </div>
-    </header>
-<main>
-    <section>    
-        <form>
-        <div class="guide-values">
-            <h3>ax²</h3>
-            <h3>bx</h3>
-            <h3>c</h3>
-        </div>
-        <div class="values">
-            <input type="text" name="a" id="a">
-        
-            <input type="text" name="b" id="b">
-        
-            <input type="text" name="c" id="c">
-        </div>
-            <input type="submit" value="Calcular" id="calc">
-        <div class="result">
-            <input disabled="disabled" class="x1" id="x1">
             
-            <input disabled="disabled" class="x2" id="x2">
-            
+            <h1>Fórmula de Bhaskara</h1> 
+            <span class="guide-btn" id="guide_btn" ><?xml version="1.0" encoding="UTF-8"?>
+                <img id="drag_off" src="/components/images/Vector.svg"  alt="guide">
+            </span>
         </div>
-        </form>
-    </section>
-
-    <script src="app.js"></script>
-</main>
-    <!-- <div class="result-container" id="result_container">
-        <div class="result" id="result">
-            <h1 id="math_result"></h1>
-           
-
-    </div>         -->
-        
+    </header>   
+<main> 
+<section>           
+<div  class="guide-container" id="guide_container">            
+    <div class ="guide-modal">
+        <span class="close-guide" id="close_btn">&times</span>
+        <div class="modal-content">
+            <h3>Lorem ipsum dolor</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+                tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
+                Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi,
+                condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, 
+                eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis.
+                Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. 
+                Aliquam erat volutpat. Nam dui mi,
+                tincidunt quis, accumsan porttitor, facilisis luctus, metus
+            </p>
+        </div>
+    </div>
+</div>
+<form>
+    <div class="guide-values">
+        <h3>ax²</h3>
+        <h3>bx</h3>
+        <h3>c</h3>
+    </div>
+    <div class="values">
     
+        <input type="text" name="a" id="a" value="-1">
+    
+        <input type="text" name="b" id="b" value="2">
+    
+        <input type="text" name="c" id="c" value="3">
+    
+    </div>
+    <input type="button" value="Calcular" id="calc">
+    <div class="result-container" id="result_container">
+        <span id="window_result">quadro de resposta</span>
+        <div id="result_guide" class="result-guide half">
+        <h4 id="formula_ex"></h4>
+        <p id="formula" ></p>
+        <h4 id="equation_sub"></h4>
+        <p id="equation_ex"></p>
+        <h4 id="add_equation_sub"></h4>
+        <p id="add_equation"></p>
+        <h4 id="delta_sub"></h4>
+        <p id="delta_ex"></p>
+        <h4 id="add_delta_sub"></h4>
+        <p id="add_delta"></p>
+        <p id="delta_solved" class="root-tag"></p>
+        <h4 id="add_formula_ex_sub" class="root-tag"></h4>
+        <p id="add_formula_ex" class="root-tag"></p>
+        <p id="add_formula" class="root-tag"></p>
+        <h4 id="roots_ex" class="root-tag"></h4>
+        <p id="root" class="root-tag"></p>
+        <p id="second_root" class="root-tag"></p>
+        <div id="error" class="root-tag"></div>
+    </div>
+    </div>
+</form>
+</section>
+<script type="module" src="./main.js"></script>
+</main>
 </body>
 </html>

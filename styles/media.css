@@ -3,11 +3,21 @@
       flex-direction: column;
     }
 
+    img {
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
     main {
         flex-direction: column;
     }
+
     header :nth-child(1) {
         font-size: 26px;
+    }
+
+    .guide-modal {
+        width: 80%;
     }
 
     input {
@@ -15,12 +25,7 @@
         align-self: center;
         height: 30px;
     }
-    .result input {
-        align-self: center;
-        text-align: center;
-        height: 2em;
-        border: 2px solid black;
-    }
+    
     .title {
         flex-direction: row;
         width: 80%;
@@ -28,7 +33,7 @@
         padding: 0;
     }
 
-    header :nth-child(1){
+    header :nth-child(1) {
         padding: 0;
     }
 

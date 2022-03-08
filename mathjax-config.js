@@ -4,3 +4,4 @@ MathJax = {
     enableMenu: false,
   }
 }
+
