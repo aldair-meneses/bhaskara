@@ -1,4 +1,4 @@
-import { non_root, two_roots } from "./equations.js"
+import { non_root, roots } from "./equations.js"
 export { more_info, how_to, drag, equation }
 
 function more_info(){
@@ -38,10 +38,9 @@ function drag(){
     drag.draggable = false;
 }
 
-function equation(delta, sqrt_delta){
+function equation(delta,x1,x2){
+    console.log(x1, x2)
     return (delta < 0) ? non_root(delta)  
         : (a.value == '') ? how_to()
-        : two_roots(delta,sqrt_delta);
+        : roots(delta,x1,x2);
 }
-
-    

@@ -6,7 +6,7 @@
 
 .title {
     margin: auto;
-    padding: 1em;
+    padding: 0.5em;
     display: flex;
     flex-direction: row;
 }
@@ -154,23 +154,15 @@ form [type="button"]{
 
 .result-container {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     border: 2px solid black;
-    min-height: 250px;
+    height: 460px;
     background-color: #ffffff;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .result-container p, h4 {
-    display: flex;
-    justify-content: center;
     margin: 0 auto;
-    margin-top: 10px;
+    padding: 5px;
+    text-align: center;
 }
-
-
-.half{
-    display: none;
-}
-
