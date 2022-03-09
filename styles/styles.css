@@ -160,7 +160,7 @@ form [type="button"]{
     width: 100%;
     justify-content: center;
     border: 2px solid rgb(0, 0, 0);
-    height: 480px;
+    height: 460px;
     background-color: #ffffff;
     overflow-y: auto;
 }
@@ -173,6 +173,7 @@ form [type="button"]{
     justify-content: center;
     margin: 0 auto;
 }
+
 .result-container h4 {
     display: flex;
     justify-content: center;
@@ -187,3 +188,19 @@ form [type="button"]{
     text-align: center;
     font-family: 'Poppins', sans-serif;
 }
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}  
+::-webkit-scrollbar {
+    width: 8px;
+}
+  
