@@ -22,7 +22,7 @@ help.addEventListener("click", (event)=>{
 }
 
 function how_to(how){
-    let window_result = document.querySelector('#window_result');
+    let window_result = document.querySelector('.window-title');
     window_result.style.display = ("none")
     let how_to_half = document.querySelectorAll('.half');
     for (how of how_to_half){

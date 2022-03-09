@@ -19,7 +19,7 @@
     .guide-modal {
         width: 80%;
     }
-
+    
     input {
         width: 50%;
         align-self: center;
@@ -35,6 +35,17 @@
 
     header :nth-child(1) {
         padding: 0;
+    }
+
+    .result-container {
+        height: 420px;
+    }
+
+    .result-container p, h4 {
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
     }
 
 }

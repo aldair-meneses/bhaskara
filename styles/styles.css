@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 * {
-    margin: 0;
+    margin: 0 auto;
 }
 
 .title {
@@ -9,11 +9,11 @@
     padding: 0.5em;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 body{
     background-color: #d9e9f3;
-    font-family: 'Asap', sans-serif;
     max-width: 1200px;
     margin: 0 auto;
     padding: 30px; 
@@ -26,10 +26,9 @@ header {
 }
 
 header :nth-child(1){
-    gap: 20px;
-    font-size: 36px;
-    font-family: 'Asap', sans-serif;
+    gap: 14px;
     text-align: center;
+    font-family: 'Secular One', sans-serif;
 }
 
 img {
@@ -44,22 +43,18 @@ img:hover {
     transform: scale(1.2);
 }
 
-.guide-values {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 5px;
-}
-
 section{
     width: 100%;
     display: flex;
-    text-align: center;
+    justify-content: center;
 }
 
-
-form:nth-child(-n+3){
-    margin: auto;
+.guide-values{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
 }
 
 input {
@@ -67,32 +62,41 @@ input {
     width: 150px;
 }
 
-
 .values {
     display: flex;
     justify-content: center;
+    flex-direction: row;
     height: 42px;
 }
 
 .values input{
+    display: flex;
+    justify-content: center;
     border: 2px solid black;
     outline: none;
+
 }
 
 .values input:nth-child(+n+2){
     border-left: none;
 }
 
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 form [type="button"]{
     width: 160px;
     height: 40px;
-    margin: 20px;
+    margin: 20px auto;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
-    background-color: #8b8a8a;
+    background-color: #ffffff;
 }
 
 .guide-container {
@@ -153,16 +157,33 @@ form [type="button"]{
 }
 
 .result-container {
-    display: flex;
+    width: 100%;
     justify-content: center;
-    border: 2px solid black;
-    height: 460px;
+    border: 2px solid rgb(0, 0, 0);
+    height: 480px;
     background-color: #ffffff;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
-.result-container p, h4 {
+.result-container p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
-    padding: 5px;
+}
+.result-container h4 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.window-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
