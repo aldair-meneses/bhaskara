@@ -1,12 +1,12 @@
 export {non_root, roots}
 
 function print_equation(equation, id) {
-    const math = document.getElementById(`${id}`);
+    const math = document.querySelector(`#${id}`);
     math.innerHTML = (equation);
 }
 
 function generate_doc(sub_txt,id){
-    let ex = document.getElementById(`${id}`);
+    let ex = document.querySelector(`#${id}`);
     ex.innerHTML = (sub_txt);
 }    
 

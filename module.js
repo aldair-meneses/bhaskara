@@ -34,7 +34,7 @@ function how_to(how){
 }
 
 function drag(){
-    const drag =  document.getElementById("drag_off");
+    const drag =  document.querySelector("#drag_off");
     drag.draggable = false;
 }
 
