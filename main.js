@@ -39,4 +39,3 @@ calc.addEventListener("click", ()=>{
     how_to();
     bhaskara();
 });
-
