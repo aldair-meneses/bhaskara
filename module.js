@@ -38,9 +38,13 @@ function drag(){
     drag.draggable = false;
 }
 
-function equation(delta,x1,x2){
-    console.log(x1, x2)
-    return (delta < 0) ? non_root(delta)  
-        : (a.value == '') ? how_to()
-        : roots(delta,x1,x2);
+function equation(delta,delta_root,x1,x2){
+    console.log(`delta no módulo: ${delta}`)
+    console.log(`raiz de delta no módulo: ${delta_root}`)
+    if (delta_root < 0){        
+        non_root()
+        console.log(delta_root)
+    }else{
+        roots(delta,delta_root,x1,x2)
+    }
 }

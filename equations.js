@@ -29,14 +29,14 @@ function non_root(delta, tags){
     generate_doc("Calculando discriminante (Delta)", 'add_delta_sub');
 }
 
-function roots(delta,x1,x2){
+function roots(delta,delta_root,x1,x2){
     const formula_ex = (`\\[ x = {- b \\pm \\sqrt{\\Delta} \\over 2 \\cdot a}  \\quad \\] `);
     const formula_ex_values = (`\\[ x = {- ${b.value} \\pm \\sqrt{${delta}} \\over 2 \\cdot ${a.value}} \\quad \\]`);
-    const add_formula = (`\\[ x = {- ${b.value} \\pm {${Math.sqrt(delta)}} \\over 2 \\cdot ${a.value}} \\]`);
-    const first_root = (`\\[ x' = {-${b.value} + {${Math.sqrt(delta)}} \\over 2 \\cdot ${a.value}} \\qquad  \\]`);
-    const first_root_sol = (`\\[x' = { -${(- b.value + Math.sqrt(delta))} \\over ${2 * a.value}} \\qquad \\ x' = ${x1} \\]`);
-    const second_root = (`\\[ x'' = {-${b.value} - {${Math.sqrt(delta)}} \\over 2 \\cdot ${a.value}} \\qquad  \\]`)
-    const second_root_sol = (`\\[x'' = { ${(- b.value - Math.sqrt(delta))} \\over ${2 * a.value}} \\qquad \\ x'' = ${x2} \\]`)
+    const add_formula = (`\\[ x = {- ${b.value} \\pm {${delta_root}} \\over 2 \\cdot ${a.value}} \\]`);
+    const first_root = (`\\[ x' = {-${b.value} + {${delta_root}} \\over 2 \\cdot ${a.value}} \\qquad  \\]`);
+    const first_root_sol = (`\\[x'' = { ${( -b.value +  +delta_root)} \\over ${2 * a.value}} \\qquad \\ x'' = ${x1} \\]`)
+    const second_root = (`\\[ x'' = {-${b.value} - {${delta_root}} \\over 2 \\cdot ${a.value}} \\qquad  \\]`)
+    const second_root_sol = (`\\[x'' = { ${(- b.value - delta_root)} \\over ${2 * a.value}} \\qquad \\ x'' = ${x2} \\]`)
 
     print_equation("\\[x =  {-b \\pm \\sqrt { b^2 -4 \\cdot a \\cdot c } \\over 2 \\cdot a}  \\]","formula");
     print_equation("\\[ax^2 + bx + c = 0 \\]", "equation_ex");    
@@ -46,8 +46,8 @@ function roots(delta,x1,x2){
     print_equation(`\\[ \\Delta = ${delta}\\]`,"delta_solved");
     print_equation(`${formula_ex + formula_ex_values}`, "add_formula_ex");
     print_equation(add_formula, "add_formula");
-    print_equation(`${first_root + first_root_sol}`, "root")
-    print_equation(`${second_root + second_root_sol}`, "second_root")
+    print_equation(`${first_root}  ${first_root_sol}`, "root")
+    print_equation(`${second_root} ${second_root_sol}`, "second_root")
 
     generate_doc("Fórmula", "formula_ex");
     generate_doc("Equação do segundo do segundo grau","equation_sub");
